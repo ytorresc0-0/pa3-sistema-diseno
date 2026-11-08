@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistema de diseño – Tony's Chocolonely</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E4002B;--redh:#C20024;--blue:#1E4FC4;--blueh:#173D9A;--yel:#FFC72C;--pink:#FFA3C0;--org:#FF6A13;--dark:#2B1A12;--cream:#FFF6E8;--mut:#6B5A50;
+--pg:#FFF6E8;--ink:#2B1A12;--cd:#fff;--ln:#2B1A12;
+--H:'Alfa Slab One','Rockwell Extra Bold',Georgia,serif;--T:'Zilla Slab',Rockwell,Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pg:#1c130e;--ink:#FFF6E8;--cd:#2b1d15;--ln:#FFF6E8;color-scheme:dark}}
+:root[data-theme="dark"]{--pg:#1c130e;--ink:#FFF6E8;--cd:#2b1d15;--ln:#FFF6E8;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--pg);color:var(--ink);font:400 16px/24px var(--T)}
+header.top{background:var(--red);color:#fff;padding:28px 18px}
+header.top h1{font:400 34px/40px var(--H);margin:0 0 6px}header.top p{margin:0;max-width:640px}
+nav.ix{display:flex;gap:8px;flex-wrap:wrap;padding:12px 18px;background:var(--dark)}
+nav.ix a{color:var(--cream);font:600 13px/16px var(--T);text-decoration:none;padding:6px 10px;border:2px solid var(--cream);border-radius:20px}
+nav.ix a:hover{background:var(--yel);color:var(--dark);border-color:var(--yel)}
+section{max-width:960px;margin:0 auto;padding:26px 18px;border-bottom:3px solid var(--ln)}
+h2{font:400 26px/32px var(--H);color:var(--red);margin:0 0 4px}h3{font:700 18px/24px var(--T);margin:18px 0 8px}
+.n{color:var(--mut);font-size:14px}:root[data-theme="dark"] .n{color:#d9c7b8}
+.g{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.sw{border:3px solid var(--ln);border-radius:12px;overflow:hidden;background:var(--cd)}
+.sw i{display:block;height:74px}.sw div{padding:8px 10px;font-size:14px;line-height:19px}.sw b{font-family:var(--H);font-weight:400}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:640px}th,td{border-bottom:2px solid var(--ln);padding:8px;text-align:left;vertical-align:top;font-size:14px;line-height:20px}
+.bt{display:inline-block;font:400 16px/20px var(--H);padding:12px 22px;border-radius:999px;border:3px solid var(--red);background:var(--red);color:#fff;text-decoration:none;cursor:pointer}
+.bt:hover,.bt.h{background:var(--redh);border-color:var(--redh)}
+.bt.p{background:#9b0020;border-color:#9b0020}
+.bt.s{background:transparent;color:var(--red)}.bt.s:hover,.bt.s.h{background:var(--red);color:#fff}
+.bt.y{background:var(--yel);border-color:var(--yel);color:var(--dark)}.bt.y:hover,.bt.y.h{background:var(--org);border-color:var(--org);color:#fff}
+.bt.d{background:#cfc4bb;border-color:#cfc4bb;color:#7b6c62;cursor:not-allowed}
+.lkx{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}.lkx:hover,.lkx.h{color:var(--red);text-decoration-thickness:3px}
+:root[data-theme="dark"] .lkx{color:#8aa9ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lkx{color:#8aa9ff}}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.cell{display:flex;flex-direction:column;gap:6px;align-items:flex-start}.cell small{font-size:12px;color:var(--mut)}
+.img{width:100%;max-width:280px;aspect-ratio:4/3;border:3px solid var(--dark);border-radius:12px;background:linear-gradient(135deg,var(--yel),var(--pink));display:flex;align-items:center;justify-content:center;font:400 14px var(--H);color:var(--dark)}
+.vid{position:relative}.vid::after{content:"▶";position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+.ic{display:flex;flex-direction:column;align-items:center;gap:4px;width:84px;color:var(--ink);cursor:pointer}
+.ic svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ic span{font:600 12px/16px var(--T)}.ic:hover,.ic.h{color:var(--red)}
+.gr{height:70px;border-radius:12px;border:3px solid var(--dark)}
+.tx{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;width:240px;padding:6px;border:3px solid var(--dark);border-radius:12px;background:var(--cream)}
+.tx i{display:block;height:34px;border-radius:3px}
+.in{font:400 16px/24px var(--T);padding:10px 12px;border:3px solid var(--dark);border-radius:10px;background:#fff;color:var(--dark);width:240px}
+.in:hover{border-color:var(--blue)}.in:focus,.in.fc{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px #1E4FC455}
+.in.er{border-color:var(--red)}.in.ds{background:#e8e0d8;color:#8b7c72;border-color:#cfc4bb}
+.er-t{font-size:13px;color:var(--red);font-weight:600}
+.ph{width:300px;max-width:100%;border:3px solid var(--dark);border-radius:20px;overflow:hidden;background:#fff;color:var(--dark)}
+.phh{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--red);color:#fff}
+.phh b{flex:1;text-align:center;font:400 18px var(--H)}.phh svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round}
+.mi{display:block;padding:12px 14px;border-bottom:2px solid #eadfd3;font:600 16px/20px var(--T);color:var(--dark);text-decoration:none}
+.mi:hover,.mi.h{background:var(--yel)}.mi.on{background:var(--cream);border-left:6px solid var(--red)}
+.lay{width:210px;height:300px;border:3px solid var(--dark);border-radius:14px;position:relative;background:#fff;display:flex;gap:6px;padding:0 12px}
+.lay i{flex:1;background:#E4002B22;border-left:1px dashed var(--red);border-right:1px dashed var(--red)}
+.lay::before{content:"Cabecera";position:absolute;top:0;left:0;right:0;height:34px;background:var(--red);color:#fff;font:12px/34px var(--T);text-align:center}
+.lay::after{content:"Pie de página";position:absolute;bottom:0;left:0;right:0;height:34px;background:var(--dark);color:#fff;font:12px/34px var(--T);text-align:center}
+footer{padding:22px 18px;text-align:center;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<header class="top"><h1>Sistema de diseño · Tony's Chocolonely</h1><p>Guía de estilos y biblioteca de componentes para la versión mobile. Parte del estilo del logotipo y del empaque de la marca: tipografía slab gruesa, colores primarios intensos y la tableta de chocolate con piezas desiguales.</p></header>
+<nav class="ix"><a href="#c">Colores</a><a href="#t">Tipografía</a><a href="#b">Botones</a><a href="#l">Hipervínculos</a><a href="#i">Imágenes y video</a><a href="#ic">Íconos</a><a href="#f">Fondos, degradados y texturas</a><a href="#fm">Formularios</a><a href="#m">Menú</a><a href="#ly">Layout</a></nav>
+
+<section id="c"><h2>1. Colores</h2><p class="n">Valores aproximados tomados a ojo de la identidad de la marca; verifica los exactos con el cuentagotas sobre el logotipo oficial.</p>
+<div class="g" id="sw"></div>
+<h3>Reglas de uso</h3><p>Rojo para acciones principales y cabecera; azul para enlaces; amarillo para destacar y estados hover; marrón para texto y bordes; crema como fondo general. Texto blanco solo sobre rojo, azul, naranja y marrón; texto marrón sobre amarillo, rosa y crema.</p></section>
+
+<section id="t"><h2>2. Tipografía</h2><p class="n">La marca usa una tipografía propia de trazo grueso (Chocolateletter) y ITC American Typewriter. Como son de uso restringido, el sistema usa equivalentes gratuitos de Google Fonts: <b>Alfa Slab One</b> para títulos y botones y <b>Zilla Slab</b> para el resto. Respaldo: Rockwell, Georgia, serif.</p>
+<div class="tw"><table>
+<tr><th>Estilo</th><th>Fuente / variante</th><th>Tamaño / interlineado</th><th>Color</th><th>Ejemplo</th></tr>
+<tr><td>Título (H1)</td><td>Alfa Slab One Regular</td><td>32 px / 38 px</td><td>#2B1A12</td><td style="font:400 32px/38px var(--H)">Chocolate justo</td></tr>
+<tr><td>Subtítulo (H2)</td><td>Alfa Slab One Regular</td><td>24 px / 30 px</td><td>#E4002B</td><td style="font:400 24px/30px var(--H);color:var(--red)">Nuestra misión</td></tr>
+<tr><td>Subtítulo (H3)</td><td>Zilla Slab Bold 700</td><td>20 px / 26 px</td><td>#1E4FC4</td><td style="font:700 20px/26px var(--T);color:var(--blue)">Barras de leche</td></tr>
+<tr><td>Párrafo</td><td>Zilla Slab Regular 400</td><td>16 px / 24 px</td><td>#2B1A12</td><td>Cacao trazable y pagos justos a agricultores.</td></tr>
+<tr><td>Hipervínculo</td><td>Zilla Slab SemiBold 600, subrayado</td><td>16 px / 24 px</td><td>#1E4FC4 → hover #E4002B</td><td><a class="lkx">Ver más</a></td></tr>
+<tr><td>Botón</td><td>Alfa Slab One Regular</td><td>16 px / 20 px</td><td>#FFFFFF</td><td><span class="bt" style="padding:8px 16px">Comprar</span></td></tr>
+<tr><td>Texto de ícono</td><td>Zilla Slab SemiBold 600</td><td>12 px / 16 px</td><td>#2B1A12</td><td style="font:600 12px/16px var(--T)">Carrito</td></tr>
+<tr><td>Texto secundario</td><td>Zilla Slab Regular 400</td><td>14 px / 20 px</td><td>#6B5A50</td><td style="font-size:14px;color:var(--mut)">S/ 12.90 · 100 g</td></tr>
+</table></div></section>
+
+<section id="b"><h2>3. Botones</h2><p class="n">Esquinas totalmente redondeadas (pill), borde de 3 px, texto en Alfa Slab One 16/20, relleno interno 12 × 22 px, alto táctil mínimo 44 px. Pasa el mouse por encima para ver el hover real.</p>
+<div class="row"><div class="cell"><a class="bt">Primario</a><small>Normal · #E4002B</small></div><div class="cell"><a class="bt h">Primario</a><small>Hover · #C20024</small></div><div class="cell"><a class="bt p">Primario</a><small>Presionado · #9B0020</small></div><div class="cell"><a class="bt d">Primario</a><small>Deshabilitado · #CFC4BB</small></div></div>
+<div class="row"><div class="cell"><a class="bt s">Secundario</a><small>Normal · borde rojo</small></div><div class="cell"><a class="bt s h">Secundario</a><small>Hover · relleno rojo</small></div><div class="cell"><a class="bt y">Destacado</a><small>Normal · #FFC72C</small></div><div class="cell"><a class="bt y h">Destacado</a><small>Hover · #FF6A13</small></div></div></section>
+
+<section id="l"><h2>4. Hipervínculos</h2><div class="row"><div class="cell"><a class="lkx">Ver todos los chocolates</a><small>Link (sin interacción) · azul #1E4FC4, subrayado 2 px</small></div><div class="cell"><a class="lkx h">Ver todos los chocolates</a><small>Hover · rojo #E4002B, subrayado 3 px</small></div></div></section>
+
+<section id="i"><h2>5. Imágenes y video</h2><p class="n">Borde marrón de 3 px, esquinas de 12 px, proporción 4:3 para productos y 16:9 para video. Fondo de respaldo: degradado amarillo a rosa mientras carga. Sin sombras.</p>
+<div class="row"><div class="cell"><div class="img">Foto de producto</div><small>Imagen · 4:3</small></div><div class="cell"><div class="img vid" style="aspect-ratio:16/9">Video</div><small>Video · 16:9 con botón de reproducción rojo</small></div></div></section>
+
+<section id="ic"><h2>6. Íconos</h2><p class="n">Trazo lineal de 2.2 px, esquinas redondeadas, tamaño 34 px en mobile. Texto de apoyo en Zilla Slab SemiBold 12/16. Normal en marrón #2B1A12, hover en rojo #E4002B.</p>
+<div class="row" id="icn"></div><h3>Estado hover</h3><div class="row" id="ich"></div></section>
+
+<section id="f"><h2>7. Fondos, degradados y texturas</h2>
+<div class="g"><div><div class="gr" style="background:var(--cream)"></div><p class="n">Fondo general · #FFF6E8</p></div><div><div class="gr" style="background:#E4002B"></div><p class="n">Fondo de cabecera · #E4002B</p></div>
+<div><div class="gr" style="background:linear-gradient(135deg,#E4002B,#FF6A13)"></div><p class="n">Degradado 1 · #E4002B → #FF6A13 a 135°</p></div><div><div class="gr" style="background:linear-gradient(135deg,#FFC72C,#FFA3C0)"></div><p class="n">Degradado 2 · #FFC72C → #FFA3C0 a 135°</p></div></div>
+<h3>Textura: tableta desigual</h3><div class="tx" id="tx"></div><p class="n">Cuadrícula de 6 columnas con piezas de 3 px de separación y 3 px de radio, en rojo, azul, amarillo, rosa y naranja alternados. Se usa como decoración en cabeceras de sección y banners.</p></section>
+
+<section id="fm"><h2>8. Formularios</h2><p class="n">Campos con borde marrón de 3 px, esquinas de 10 px, texto Zilla Slab 16/24. La etiqueta va arriba en Zilla Slab SemiBold 14.</p>
+<div class="row"><div class="cell"><b>Correo</b><input class="in" placeholder="nombre@correo.com"><small>Normal</small></div><div class="cell"><b>Correo</b><input class="in fc" value="nombre@correo.com"><small>Enfocado · borde azul</small></div><div class="cell"><b>Correo</b><input class="in er" value="nombre@"><span class="er-t">Ingresa un correo válido</span><small>Error · borde rojo</small></div><div class="cell"><b>Correo</b><input class="in ds" value="No editable" disabled><small>Deshabilitado</small></div></div>
+<div class="row"><label><input type="checkbox" style="width:20px;height:20px;accent-color:#E4002B"> Acepto los términos y condiciones</label><span class="bt" style="padding:10px 18px">Continuar</span></div></section>
+
+<section id="m"><h2>9. Menú de navegación</h2><p class="n">Cabecera roja con menú hamburguesa, logotipo y carrito. El menú abierto lista las secciones del mapa de sitio; el ítem activo lleva barra roja y el hover se resalta en amarillo.</p>
+<div class="row" style="align-items:flex-start"><div class="cell"><div class="ph"><div class="phh"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg><b>Tony's</b><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 13h11l2-9H6"/></svg></div></div><small>Menú cerrado</small></div>
+<div class="cell"><div class="ph"><div class="phh"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg><b>Tony's</b><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 13h11l2-9H6"/></svg></div><a class="mi on">Inicio</a><a class="mi">Chocolates</a><a class="mi h">Comprar (hover)</a><a class="mi">Nuestra misión</a><a class="mi">Comunidad</a><a class="mi">Mi cuenta</a><a class="mi">Nosotros</a></div><small>Menú abierto</small></div></div></section>
+
+<section id="ly"><h2>10. Layout y espaciado</h2>
+<div class="row" style="align-items:flex-start"><div class="cell"><div class="lay"><i></i><i></i><i></i><i></i></div><small>Mobile 390 px</small></div>
+<div><p>Ancho de diseño: 390 px. Estructura fija en todas las pantallas: cabecera, contenido en 4 columnas y pie de página.</p><p>Márgenes laterales: 16 px · Separación entre columnas: 16 px.</p><p>Escala de espaciado: 4 · 8 · 16 · 24 · 32 px.</p><p>Radios: 8 px (tarjetas), 12 px (imágenes), 999 px (botones).</p><p>Borde estándar: 3 px #2B1A12.</p></div></div></section>
+<footer>Sistema de diseño académico. Colores aproximados e inspirados en la identidad de Tony's Chocolonely.</footer>
+<script>
+const COL=[['Rojo principal','#E4002B',[228,0,43],'Acciones, cabecera'],['Rojo hover','#C20024',[194,0,36],'Hover del botón primario'],['Azul','#1E4FC4',[30,79,196],'Enlaces, foco'],['Azul hover','#173D9A',[23,61,154],'Hover del azul'],['Amarillo','#FFC72C',[255,199,44],'Destacados, hover de menú'],['Rosa','#FFA3C0',[255,163,192],'Acentos y degradados'],['Naranja','#FF6A13',[255,106,19],'Acentos, hover amarillo'],['Marrón','#2B1A12',[43,26,18],'Texto y bordes'],['Texto secundario','#6B5A50',[107,90,80],'Precios, notas'],['Crema','#FFF6E8',[255,246,232],'Fondo general'],['Blanco','#FFFFFF',[255,255,255],'Texto sobre color, tarjetas']];
+document.getElementById('sw').innerHTML=COL.map(c=>`<div class="sw"><i style="background:${c[1]}"></i><div><b>${c[0]}</b><br>HEX ${c[1]}<br>RGB ${c[2].join(', ')}<br><span class="n">${c[3]}</span></div></div>`).join('');
+const IC={Menú:'<path d="M3 6h18M3 12h18M3 18h18"/>',Buscar:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/>',Carrito:'<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 13h11l2-9H6"/>',Cuenta:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',Favorito:'<path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/>',Cerrar:'<path d="M5 5l14 14M19 5L5 19"/>'};
+const mk=h=>Object.entries(IC).map(([n,p])=>`<div class="ic ${h}"><svg viewBox="0 0 24 24">${p}</svg><span>${n}</span></div>`).join('');
+document.getElementById('icn').innerHTML=mk('');document.getElementById('ich').innerHTML=mk('h');
+const TC=['#E4002B','#1E4FC4','#FFC72C','#FFA3C0','#FF6A13','#E4002B','#FFA3C0','#FFC72C','#E4002B','#1E4FC4','#FF6A13','#FFC72C','#1E4FC4','#FF6A13','#FFA3C0','#E4002B','#FFC72C','#1E4FC4'];
+document.getElementById('tx').innerHTML=TC.map((c,i)=>`<i style="background:${c};${i%5==0?'grid-column:span 2':''}"></i>`).join('');
+</script>
+</body>
+</html>
